@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${getPoppins.className} ${geistSans.className} ${geistMono.className}`}
       >
+        <Navbar/>
         {children}
       </body>
     </html>
